@@ -20,7 +20,7 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
-from apps.users.views import Login
+from apps.users.views import Login, Logout
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -42,6 +42,7 @@ urlpatterns = [
     re_path(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('', Login.as_view(), name='login'),
     path('admin/', admin.site.urls),
+    path('logout/', Logout.as_view(), name = 'Logout'),
     path('usuario/', include('apps.users.api.urls')),
     path('encuestas/', include('apps.encuesta.api.routers'))
 ]

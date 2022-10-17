@@ -10,3 +10,10 @@ git checkout master -> (main) -> me paso
 git branch --merged ->
 git merge otrafeature
 git push origin master -> (main)
+
+----------------------------------------------
+
+git branch -m main mtrabajo
+git fetch origin
+git branch -u origin/mtrabajo mtrabajo
+git remote set-head origin -a

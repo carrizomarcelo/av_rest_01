@@ -42,7 +42,7 @@ urlpatterns = [
     re_path(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('', Login.as_view(), name='login'),
     path('admin/', admin.site.urls),
-    path('logout/', Logout.as_view(), name = 'Logout'),
+    path('logout/', Logout.as_view(), name = 'logout'),
     path('usuario/', include('apps.users.api.urls')),
     path('encuestas/', include('apps.encuesta.api.routers'))
 ]

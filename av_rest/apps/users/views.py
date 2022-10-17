@@ -58,6 +58,7 @@ class Logout(APIView):
     def get(self, request, *args, **kwargs):
         try:
             token = request.GET.get('token')
+            print(token)
             token = Token.objects.filter(key = token).firts()
             
             if token:

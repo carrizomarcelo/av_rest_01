@@ -20,7 +20,7 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
-from apps.users.views import Login, Logout
+from apps.users.views import Login, Logout, UserToken
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -44,5 +44,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('logout/', Logout.as_view(), name = 'logout'),
     path('usuario/', include('apps.users.api.urls')),
+    path('refresh-token/',UserToken.as_view(), name='refresh_token'),
     path('encuestas/', include('apps.encuesta.api.routers'))
 ]

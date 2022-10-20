@@ -3,9 +3,11 @@ from rest_framework import status
 from rest_framework import viewsets
 from rest_framework.response import Response
 
+from apps.users.authentication_mixins import Authentication
+
 from apps.encuesta.api.serializers.encuesta_serializers import EncuestaSerializer
 
-class EncuestaViewSet(viewsets.ModelViewSet):
+class EncuestaViewSet(Authentication,viewsets.ModelViewSet):
     serializer_class = EncuestaSerializer
     
     def get_queryset(self, pk=None):

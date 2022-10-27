@@ -1,0 +1,6 @@
+name: abordaje_varon_rest
+packages:
+- path: base
+- path: av_rest
+- path: users
+- path: encuesta

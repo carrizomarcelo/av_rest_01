@@ -34,6 +34,10 @@ zipp = "==3.8.1"
 django-cors-headers = "*"
 
 [dev-packages]
+appmap = "*"
 
 [requires]
 python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true

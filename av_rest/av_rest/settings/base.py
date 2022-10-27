@@ -113,9 +113,11 @@ USE_TZ = True
 AUTH_USER_MODEL = 'users.User'
 
 CORS_ALLOED_ORIGINS = [
-    "http://example.com",
-    "http://localhost:8000",
-    "http://127.0.0.1:9000"
+    "http://localhost:3000"
+]
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000"
 ]
 
 # Static files (CSS, JavaScript, Images)
